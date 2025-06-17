@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>dc97dd15-3cdb-48b2-8929-6be8f72efc42</groupId>
-	<artifactId>Mulesofttraining01</artifactId>
+	<artifactId>Mulesofttraining</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
-	<name>Mulesofttraining01</name>
+	<name>Mulesofttraining</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -40,7 +40,7 @@
     <password>Magizh@123</password>
     <businessGroup>CTS</businessGroup>
     <environment>Sandbox</environment>
-    <applicationName>Mulesofttraining01</applicationName>
+    <applicationName>Mulesofttraining</applicationName>
 	<replicas>1</replicas>
      <vCores>0.5</vCores>
      <!--<deploymentSettings>
