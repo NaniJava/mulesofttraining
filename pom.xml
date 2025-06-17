@@ -10,6 +10,9 @@
 	<name>mulesofttraining</name>
 
 	<properties>
+	    <type>custom</type>
+        <exchange.mule.maven.plugin>0.0.8</exchange.mule.maven.plugin>
+	
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		
