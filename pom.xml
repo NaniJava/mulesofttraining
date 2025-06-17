@@ -88,9 +88,9 @@
 
 	<repositories>
 		<repository>
-			<id>anypoint-exchange-v2</id>
+			<id>anypoint-exchange-v3</id>
 			<name>Anypoint Exchange</name>
-			<url>https://maven.anypoint.mulesoft.com/api/v2/maven</url>
+			<url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
 			<layout>default</layout>
 		</repository>
 		<repository>
@@ -99,12 +99,12 @@
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
 		</repository>
-		<repository>
+		<!--<repository>
          <id>Repository</id>
          <name>Private Exchange repository</name>
-         <url>https://maven.anypoint.mulesoft.com/api/v2/organizations/${project.groupId}/maven</url>
+         <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
          <layout>default</layout>
-       </repository>
+       </repository>-->
 	</repositories>
 
 	<pluginRepositories>
@@ -120,11 +120,11 @@
 	</pluginRepositories>
 <!-- Added for Exchange deployment -->
     <distributionManagement>
-        <repository>
-            <id>Repository</id>
-            <name>Corporate Repository</name>
-            <url>https://maven.anypoint.mulesoft.com/api/v2/organizations/${project.groupId}/maven</url>
-            <layout>default</layout>
-        </repository>
-    </distributionManagement>
+    <repository>
+      <id>Repository</id>
+      <name>Corporate Repository</name>
+      <url>https://maven.eu1.anypoint.mulesoft.com/api/v3/organizations/ORGANIZATION_ID/maven</url>
+      <layout>default</layout>
+    </repository>
+  </distributionManagement>
 </project>
