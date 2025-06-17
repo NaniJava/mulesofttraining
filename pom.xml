@@ -99,12 +99,12 @@
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
 		</repository>
-		<repository>
+		<!--<repository>
          <id>Repository</id>
          <name>Private Exchange repository</name>
          <url>https://maven.anypoint.mulesoft.com/api/v2/organizations/${project.groupId}/maven</url>
          <layout>default</layout>
-       </repository>
+       </repository>-->
 	</repositories>
 
 	<pluginRepositories>
@@ -118,7 +118,7 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-<!-- Added for Exchange deployment -->
+<!-- Added for Exchange deployment 
     <distributionManagement>
         <repository>
             <id>Repository</id>
@@ -126,5 +126,5 @@
             <url>https://maven.anypoint.mulesoft.com/api/v2/organizations/${project.groupId}/maven</url>
             <layout>default</layout>
         </repository>
-    </distributionManagement>
+    </distributionManagement>-->
 </project>
