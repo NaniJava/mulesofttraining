@@ -40,7 +40,7 @@
     <password>Magizh@123</password>
     <businessGroup>CTS</businessGroup>
     <environment>Sandbox</environment>
-    <applicationName>muletraining</applicationName>
+    <applicationName>Mulesofttraining01</applicationName>
 	<replicas>1</replicas>
      <vCores>0.5</vCores>
      <!--<deploymentSettings>
