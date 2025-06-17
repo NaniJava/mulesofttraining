@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.mycompany</groupId>
+	<groupId>dc97dd15-3cdb-48b2-8929-6be8f72efc42</groupId>
 	<artifactId>Mulesofttraining01</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
@@ -12,8 +12,9 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-		<app.runtime>4.8.1</app.runtime>
+		
+        <app.runtime>4.4.0-20230918</app.runtime>   
+		<!--<app.runtime>4.8.1</app.runtime>-->
 		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
 	</properties>
 
@@ -98,6 +99,12 @@
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
 		</repository>
+		<repository>
+         <id>Repository</id>
+         <name>Private Exchange repository</name>
+         <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
+         <layout>default</layout>
+       </repository>
 	</repositories>
 
 	<pluginRepositories>
@@ -111,5 +118,13 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-
+<!-- Added for Exchange deployment -->
+    <distributionManagement>
+        <repository>
+            <id>Repository</id>
+            <name>Corporate Repository</name>
+            <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
+            <layout>default</layout>
+        </repository>
+    </distributionManagement>
 </project>
