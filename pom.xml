@@ -41,9 +41,8 @@
     <environment>${env}</environment>
     <applicationName>${appname}</applicationName>
 	<replicas>1</replicas>
-     <workerType>${vCore}</workerType>
-     <workers>${workers}</workers>
-	 <deploymentSettings>
+     <vCores>1</vCores>
+     <deploymentSettings>
   <http>
     <inbound>
       <publicUrl>https://myapp.anypoint.com</publicUrl>
