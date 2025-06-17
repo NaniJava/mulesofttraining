@@ -63,7 +63,7 @@
         <property2>${property2}</property2>
     </properties> -->
 </cloudhub2Deployment>
-
+<classifier>mule-application</classifier>
 				</configuration>
 				
 			</plugin>
