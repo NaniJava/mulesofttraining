@@ -4,21 +4,20 @@
 
 	<groupId>dc97dd15-3cdb-48b2-8929-6be8f72efc42</groupId>
 	<artifactId>mulesofttraining</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>mule-application</packaging>
 
 	<name>mulesofttraining</name>
 
 	<properties>
-	    <type>custom</type>
-        <exchange.mule.maven.plugin>0.0.8</exchange.mule.maven.plugin>
+	    
 	
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		
-        <app.runtime>4.9.6:5e</app.runtime>   
+        
 		<!--<app.runtime>4.8.1</app.runtime>-->
-		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
+		<mule.maven.plugin.version>3.8.1</mule.maven.plugin.version>
 	</properties>
 
 	<build>
@@ -26,7 +25,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.2.0</version>
+				<version>3.1.0</version>
 			</plugin>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
@@ -38,14 +37,17 @@
     <uri>https://anypoint.mulesoft.com</uri>  <!-- or your specific CloudHub endpoint -->
 	<provider>MC</provider>
 	<target>Cloudhub-US-East-2</target>
-    <muleVersion>${mule.version}</muleVersion>
+    <muleVersion>4.4.0</muleVersion>
     <username>NeelanNew1</username>
     <password>Magizh@123</password>
     <businessGroup>CTS</businessGroup>
     <environment>Sandbox</environment>
     <applicationName>mulesofttraining</applicationName>
 	<replicas>1</replicas>
-     <vCores>0.5</vCores>
+     <vCores>0.1</vCores>
+	 <deploymentSettings>
+                            <generateDefaultPublicUrl>true</generateDefaultPublicUrl>
+                        </deploymentSettings>
      <!--<deploymentSettings>
   <http>
     <inbound>
@@ -61,23 +63,23 @@
         <property2>${property2}</property2>
     </properties> -->
 </cloudhub2Deployment>
-<classifier>mule-application-example</classifier>
+
 				</configuration>
 				
 			</plugin>
 		
-	        <plugin>
+	        <!--<plugin>
                 <groupId>org.mule.tools.maven</groupId>
                 <artifactId>exchange-mule-maven-plugin</artifactId>
                 <version>${exchange.mule.maven.plugin}</version>
                 <executions>
-                    <!--<execution>
+                    <execution>
                         <id>validate</id>
                         <phase>validate</phase>
                         <goals>
                             <goal>exchange-pre-deploy</goal>
                         </goals>
-                    </execution>-->
+                    </execution>
                     <execution>
                         <id>deploy</id>
                         <phase>deploy</phase>
@@ -87,7 +89,7 @@
                     </execution>
                 </executions>
                 <inherited>false</inherited>
-            </plugin>	
+            </plugin>	-->
 		</plugins>
 	</build>
 
@@ -114,9 +116,15 @@
     
 	<repositories>
         <repository>
-            <id>anypoint-exchange</id>
-            <name>Corporate Repository</name>
+            <id>anypoint-exchange-v3</id>
+            <name>Anypoint Exchange</name>
             <url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>mulesoft-releases</id>
+            <name>MuleSoft Releases Repository</name>
+            <url>https://repository.mulesoft.org/releases/</url>
             <layout>default</layout>
         </repository>
     </repositories>
@@ -142,17 +150,17 @@
        </repository>
 	</repositories> -->
 
-	<pluginRepositories>
-		<pluginRepository>
-			<id>mulesoft-releases</id>
-			<name>MuleSoft Releases Repository</name>
-			<layout>default</layout>
-			<url>https://repository.mulesoft.org/releases/</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories>
+	  <pluginRepositories>
+        <pluginRepository>
+            <id>mulesoft-releases</id>
+            <name>mulesoft release repository</name>
+            <layout>default</layout>
+            <url>https://repository.mulesoft.org/releases/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 <!-- Added for Exchange deployment 
     <distributionManagement>
     <repository>
@@ -163,11 +171,11 @@
     </repository>
   </distributionManagement> -->
   <distributionManagement>
-  <repository>
-  <id>anypoint-exchange</id>
-  <name>Anypoint Exchange</name>
-  <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
-  <layout>default</layout>
-  </repository>
-  </distributionManagement>
+        <repository>
+            <id>anypoint-exchange-v3</id>
+            <name>Corporate Repository</name>
+            <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/dc97dd15-3cdb-48b2-8929-6be8f72efc42/maven</url>
+            <layout>default</layout>
+        </repository>
+    </distributionManagement>
 </project>
