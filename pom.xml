@@ -71,13 +71,13 @@
                 <artifactId>exchange-mule-maven-plugin</artifactId>
                 <version>${exchange.mule.maven.plugin}</version>
                 <executions>
-                    <execution>
+                    <!--<execution>
                         <id>validate</id>
                         <phase>validate</phase>
                         <goals>
                             <goal>exchange-pre-deploy</goal>
                         </goals>
-                    </execution>
+                    </execution>-->
                     <execution>
                         <id>deploy</id>
                         <phase>deploy</phase>
