@@ -40,8 +40,8 @@
     <applicationName>${appname}</applicationName>
      <workerType>${vCore}</workerType>
      <workers>${workers}</workers>
-    <objectStore>true</objectStore>
-    <!-- <properties>
+    <!-- <objectStore>true</objectStore>
+    <properties>
         <property1>${property1}</property1>
         <property2>${property2}</property2>
     </properties> -->
